@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "https://shreyapatill.github.io/",
+  "homepage": "https://shreyapatill.github.io",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.4.2",
