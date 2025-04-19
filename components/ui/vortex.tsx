@@ -94,7 +94,7 @@ export const Vortex = (props: VortexProps) => {
     ttl = baseTTL + rand(rangeTTL);
     speed = baseSpeed + rand(rangeSpeed);
     radius = baseRadius + rand(rangeRadius);
-    hue = baseHue + rand(rangeHue);
+    hue = baseHue + rand(rangeHue); // randomly compute hue of particle
 
     particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
   };
@@ -174,7 +174,7 @@ export const Vortex = (props: VortexProps) => {
     ctx.save();
     ctx.lineCap = "round";
     ctx.lineWidth = radius;
-    ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+    ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`; // apply hue to stroke
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x2, y2);
