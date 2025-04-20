@@ -1,6 +1,15 @@
 "use client";
-import React, { useRef, useEffect, useState, } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+
+const textToHash = (text: string) => {
+  let hash = 0;
+  for (let i = 0; i < text.length; i++) {
+    hash = (hash << 5) - hash + text.charCodeAt(i);
+    hash |= 0; // Convert to 32bit integer
+  }
+  return Math.abs(hash).toString(36).slice(0, 6);
+};
 
 export const TextHoverEffect = ({
   text,
@@ -14,7 +23,7 @@ export const TextHoverEffect = ({
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
-  const [uniqueId] = useState(() => Math.random().toString(36).substring(2, 9));
+  const uniqueId = textToHash(text);
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -51,8 +60,8 @@ export const TextHoverEffect = ({
           {hovered && (
             <>
               <stop offset="0%" stopColor="#104F55" />
-              <stop offset="40%" stopColor="#2EC4B6" />
-              <stop offset="60%" stopColor="#20A4F3" />
+              <stop offset="25%" stopColor="#2EC4B6" />
+              <stop offset="50%" stopColor="#20A4F3" />
               <stop offset="75%" stopColor="#B5446E" />
               <stop offset="100%" stopColor="#CBACF9" />
             </>
