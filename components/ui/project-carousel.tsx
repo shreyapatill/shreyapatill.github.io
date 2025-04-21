@@ -2,7 +2,6 @@
 "use client";
 import React, { useEffect, useRef, useState, createContext, useContext, JSX } from "react";
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react";
-import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { FaLocationArrow } from "react-icons/fa6";
