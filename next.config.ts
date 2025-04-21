@@ -1,29 +1,19 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'your-repo-name'; // Replace with your GitHub repository name
+
 const nextConfig: NextConfig = {
-  /**
-   * Enable static exports.
-   *
-   * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
-   */
-  output: "export",
-
-  /**
-   * Set base path. This is the slug of your GitHub repository.
-   *
-   * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
-   */
-  basePath: "/personal-website",
-
-  /**
-   * Disable server-based image optimization. Next.js does not support
-   * dynamic features with static exports.
-   *
-   * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
-   */
+  output: 'export', // Required for static export
+  basePath: isProd ? `/${repoName}` : '', // Base path for GitHub Pages
+  assetPrefix: isProd ? `/${repoName}/` : '', // Asset prefix for GitHub Pages
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export with images
   },
+  // Optional: Add trailing slash for GitHub Pages compatibility
+  // trailingSlash: true,
+  // Optional: Change the output directory
+  // distDir: 'out',
 };
 
 export default nextConfig;

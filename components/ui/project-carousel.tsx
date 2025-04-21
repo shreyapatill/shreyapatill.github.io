@@ -2,6 +2,7 @@
 "use client";
 import React, { useEffect, useRef, useState, createContext, useContext, JSX } from "react";
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -232,7 +233,7 @@ export const ProjectCard = ({
                       className="flex items-center group"
                     >
                       <p className="flex lg:text-xl md:text-xs text-sm text-purple-200 group-hover:text-purple-300 transition-colors">
-                        Check Live Site
+                        Project Link
                       </p>
                       <FaLocationArrow className="ms-3" color="#CBACF9" />
                     </a>
