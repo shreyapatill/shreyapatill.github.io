@@ -1,5 +1,6 @@
 // data/index.ts
 import { ReactNode } from "react";
+import { getImageSrc } from "@/lib/imageUtils";
 
 type ContentSection = {
   title: string;
@@ -25,8 +26,14 @@ export const projects: Project[] = [
     id: 1,
     title: "PrivyTrack",
     des: "Privacy-focused period tracker with React Native frontend and secure API",
-    src: "/privy.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/privy.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://privytrack.com",
     tags: ["Mobile", "Backend", "Security", "Fullstack"],
     content: {
@@ -49,8 +56,14 @@ export const projects: Project[] = [
     id: 2,
     title: "Amazon Fire TV News Widget",
     des: "APL-based content delivery system for Alexa devices",
-    src: "/news-widget.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/news-widget.png"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://www.aboutamazon.com/news/devices/amazons-latest-fire-tv-is-smarter-than-ever-thanks-to-ambient-intelligence-and-alexa",
     tags: ["Frontend", "Cloud", "Graphics"],
     content: {
@@ -74,8 +87,14 @@ export const projects: Project[] = [
     id: 3,
     title: "Amazon Ad Analytics Dashboard",
     des: "React/Redux visualization for FireTV user ad metrics",
-    src: "/firetv-ads.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/firetv-ads.png"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://advertising.amazon.com/resources/ad-specs/fire-tv",
     tags: ["Data", "Frontend", "Cloud"],
     content: {
@@ -99,8 +118,14 @@ export const projects: Project[] = [
     id: 4,
     title: "John Deere AutoPath Analytics",
     des: "C++ data pipeline for autonomous farming systems",
-    src: "/autopath.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/autopath.png"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://www.deere.com/en/technology-products/precision-ag-technology/guidance/autopath/",
     tags: ["Embedded", "Data", "Robotics"],
     content: {
@@ -122,8 +147,14 @@ export const projects: Project[] = [
     id: 5,
     title: "Linux-like OS Kernel Implementation",
     des: "From-bootloader userspace environment in RISC-V ASM/C",
-    src: "/linux-os.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/linux-os.png"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/shreyapatill/operating-systems",
     tags: ["Embedded", "Systems", "Research"],
     content: {
@@ -145,8 +176,14 @@ export const projects: Project[] = [
     id: 6,
     title: "FPGA 2048",
     des: "SystemVerilog VGA controller with NIOS-II CPU",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["Embedded", "Graphics", "GameDev"],
     content: {
@@ -166,8 +203,14 @@ export const projects: Project[] = [
     id: 7,
     title: "Traversing Disney World",
     des: "Pathfinding algorithms for theme park navigation",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["Algorithms", "Systems"],
     content: {
@@ -187,8 +230,14 @@ export const projects: Project[] = [
     id: 8,
     title: "Amicus Curator",
     des: "AI system for judicial sentencing analysis",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["AI/ML", "Systems"],
     content: {
@@ -208,8 +257,14 @@ export const projects: Project[] = [
     id: 9,
     title: "MemoryBeats",
     des: "Music playlist generator for dementia patients",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["Mobile", "Backend"],
     content: {
@@ -229,8 +284,14 @@ export const projects: Project[] = [
     id: 10,
     title: "Improving MMS Algorithm",
     des: "Research in fair division algorithms",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["Algorithms", "Research"],
     content: {
@@ -250,8 +311,14 @@ export const projects: Project[] = [
     id: 11,
     title: "Rubik's Cube Solving Robot",
     des: "Autonomous robot for solving Rubik's Cube",
-    src: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    src: getImageSrc("/p1.svg"),
+    iconLists: [
+      getImageSrc("/re.svg"),
+      getImageSrc("/tail.svg"),
+      getImageSrc("/ts.svg"),
+      getImageSrc("/three.svg"),
+      getImageSrc("/fm.svg"),
+    ],
     link: "https://github.com/adrianhajdin?tab=repositories",
     tags: ["Embedded", "Robotics"],
     content: {
