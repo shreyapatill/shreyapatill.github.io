@@ -1,19 +1,16 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'personal-website'; // Replace with your GitHub repository name
+const repoName = 'personal-website'; // Must match your GitHub repo name exactly
 
 const nextConfig: NextConfig = {
-  output: 'export', // Required for static export
-  basePath: isProd ? `/${repoName}` : '', // Base path for GitHub Pages
-  assetPrefix: isProd ? `/${repoName}/` : '', // Asset prefix for GitHub Pages
+  output: 'export',
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
   images: {
-    unoptimized: true, // Required for static export with images
+    unoptimized: true,
   },
-  // Optional: Add trailing slash for GitHub Pages compatibility
-  // trailingSlash: true,
-  // Optional: Change the output directory
-  // distDir: 'out',
+  trailingSlash: true, // Highly recommended for GitHub Pages
 };
 
 export default nextConfig;
