@@ -1,217 +1,161 @@
-export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
-];
+// data/index.ts
+import { ReactNode } from "react";
 
-export const gridItems = [
+type ContentSection = {
+  title: string;
+  items: string[];
+};
+
+export type Project = {
+  id: number;
+  title: string;
+  des: string;
+  src: string;
+  iconLists: string[];
+  link: string;
+  tags: string[]; // Changed from single category to multiple tags
+  content: {
+    description: string;
+    sections: ContentSection[];
+  };
+};
+
+export const projects: Project[] = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
-
-export const projects = [
-  {
-    id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "PrivyTrack",
+    des: "Privacy-focused period tracker with React Native frontend and secure API",
+    src: "/p1.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Mobile", "Backend", "Security", "Fullstack"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Managed full product development lifecycle of a period tracking app featuring 5 distinct privacy levels for increased user security.",
+            "Built secure auth flows **(MFA, SSO) and fluid user interface in React Native, with REST API for backend integration.",
+            "Designed Supabase backend for data persistence, implementing predictive cycle algorithms and data visualizations.",
+            "Integrated Expo Router for navigation, Tailwind CSS for styling, React-Hook-Form for form handling, Zod for schema validation, and TypeScript for type safety.",
+            "Raised $10,000 from iVenture Accelerator and featured as one of Poets & Quant's Most Disruptive Startups."
+          ]
+        }
+      ],
+      description: "Privacy-focused period tracker with React Native frontend and secure API"
+    }
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
-  },
-  {
+    title: "Amazon Fire TV News Widget",
+    des: "APL-based content delivery system for Alexa devices",
+    src: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Frontend", "Cloud", "Graphics"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Led the design and development of a News widget for Fire TV Ambient Experience, collaborating with UI/UX, Product, News, and Widget Framework teams.",
+            "Learned Alexa Programming Language (APL) and implemented Fire TV News Widget UI with APL to meet UX design requirements.",
+            "Implemented a data layer (Java/Kotlin) connecting the widget UI with news data source, receiving news updates through Android ContentResolver, transforming the data, and automatically refreshing the News Widget using the Observer pattern.",
+            "Debugged Android application using ADB logs and wrote unit test scripts using JUnit.",
+            "Utilized the Hedwig framework and Partner Managed Rows (PMR) for on-demand video clips, implementing features like deep linking.",
+            "Managed scoping requirements, creating detailed design documentation, and developing strategies for sustainable long-term improvements while ensuring alignment with business goals."
+          ]
+        }
+      ],
+      description: "APL-based content delivery system for Alexa devices"
+    }
+  },  {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
+    title: "Amazon Ad Analytics Dashboard",
+    des: "React/Redux visualization for FireTV user ad metrics",
+    src: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Data", "Frontend", "Cloud"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Designed a centralized heatmap, improving ad experiences for 150M+ users.",
+            "Built the application on Harmony console using MVC frameworks, achieving a 500x performance improvement in backend data retrieval.",
+            "Developed microservices using AWS tools Artha and Horizonte for dynamic metric integration.",
+            "Implemented frontend with Redux for state management, React Router for navigation, and custom React components for efficient visualization.",
+            "Designed and implemented features like highlighted labeled tiles, collapsible data panels, aesthetic UI, dynamic controls (configuration switches, active state toggles) to visualize ad products.",
+            "Deployed via Amazon’s proprietary CI/CD tools, conducting user acceptance testing and training sessions with ~20 FTV product managers for immediate feedback.",
+          ]
+        }
+      ],
+      description: "React/Redux visualization for FireTV user ad metrics"
+    }
+  },  {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
+    title: "John Deere AutoPath Analytics",
+    des: "C++ data pipeline for autonomous farming systems",
+    src: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Embedded", "Data", "Robotics"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Developed analytics dashboard for John Deere’s AutoPath, an autonomous farming navigation system used in 5,000+ farm vehicles, using C/C++.",
+            "Leveraged an existing framework to package and transmit data from embedded systems to analytics team, improving plant-to-row and boundary tracking features and optimizing product placement and agricultural yield.",
+            "Developed a data pipeline using Qt Creator to streamline processing.",
+            "Orchestrated automated build processes using Jenkins pipelines for testing and release management."
+          ]
+        }
+      ],
+      description: "C++ data pipeline for autonomous farming systems"
+    }
+  },  {
     id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
+    title: "Linux-like OS Kernel Implementation",
+    des: "From-bootloader userspace environment in RISC-V ASM/C",
+    src: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Embedded", "Systems", "Research"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Developed core operating system components roughly based on Unix V6 and written primarily in RISC-V assembly and C",
+            "Implemented functionalities such as interrupt logic, user threading, Sv39 paging for kernel and applications, device initialization via virtio, and a filesystem to run user programs.",
+            "Implemented key OS abstractions including a filesystem for loading ELF executables, a system call interface enabling user programs to request kernel services, and concurrency mechanisms like fork, locking, and preemptive multitasking.",
+            "Debugged both kernel and user-level code using gdb."
+          ]
+        }
+      ],
+      description: "From-bootloader userspace environment in RISC-V ASM/C"
+    }
+  },  {
+    id: 5,
+    title: "FPGA 2048",
+    des: "SystemVerilog VGA controller with NIOS-II CPU",
+    src: "/p1.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/adrianhajdin?tab=repositories",
+    tags: ["Embedded", "Graphics", "GameDev"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Implemented the 2048 game on an FPGA, utilizing NIOS II CPU programmed in C to manage game logic such as tile movement, merging, and scorekeeping.",
+            "Developed hardware modules in SystemVerilog for the VGA controller and video RAM (VRAM) to render 4x4 game board and tiles with distinct colors."
+          ]
+        }
+      ],
+      description: "SystemVerilog VGA controller with NIOS-II CPU"
+    }
   },
 ];
