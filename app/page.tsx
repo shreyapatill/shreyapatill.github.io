@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
 import RecentProjects from "@/components/RecentProjects";
+import Image from "next/image";
+import styles from "./MyComponent.module.css"; // adjust if needed
 
 export default function Home() {
   return (
@@ -15,6 +17,16 @@ export default function Home() {
         />
         <Hero />
         <RecentProjects />
+        <div>
+          <Image
+            src="/personal-website/vercel.svg"
+            alt="Vercel Logo"
+            className={styles.vercelLogo}
+            width={100}
+            height={24}
+            priority
+          />
+        </div>
       </div>
     </main>
   );
