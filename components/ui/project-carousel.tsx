@@ -2,10 +2,10 @@
 "use client";
 import React, { useEffect, useRef, useState, createContext, useContext, JSX } from "react";
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react";
-import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -118,7 +118,8 @@ export const ProjectCard = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  // Remove currentIndex since it is not used
+  const { onCardClose } = useContext(CarouselContext);
 
   useOutsideClick(containerRef as React.RefObject<HTMLElement>, () => setOpen(false));
 
@@ -162,9 +163,10 @@ export const ProjectCard = ({
             {project.title}
           </p>
         </div>
-        <img
+        <Image
           src={project.src}
           alt={project.title}
+          fill
           className="absolute inset-0 z-10 object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity"
         />
       </motion.button>
@@ -211,9 +213,11 @@ export const ProjectCard = ({
                           transform: `translateX(-${5 * iconIndex + 2}px)`,
                         }}
                       >
-                        <img 
-                          src={icon} 
-                          alt={`tech-icon-${iconIndex}`} 
+                        <Image
+                          src={icon}
+                          alt={`tech-icon-${iconIndex}`}
+                          width={40}
+                          height={40}
                           className="p-2 w-full h-full object-contain"
                         />
                       </div>

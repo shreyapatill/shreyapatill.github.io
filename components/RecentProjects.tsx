@@ -1,7 +1,7 @@
 // components/RecentProjects.tsx
 import React from "react";
+import Image from "next/image";
 import { ProjectCarousel, ProjectCard } from "@/components/ui/project-carousel";
-import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 
 type ContentSection = {
@@ -32,9 +32,11 @@ const buildProjectContent = (
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <img 
-          src={imageSrc} 
-          alt="Project screenshot" 
+        <Image
+          src={imageSrc}
+          alt="Project screenshot"
+          width={800}
+          height={600}
           className="rounded-lg border border-black-300"
         />
         
@@ -62,7 +64,7 @@ const RecentProjects = () => {
       project={{
         src: project.src,
         title: project.title,
-        tags: project.tags, // Pass tags to ProjectCard
+        tags: project.tags,
         content: buildProjectContent(
           project.content.description,
           project.src,
@@ -80,7 +82,7 @@ const RecentProjects = () => {
     <section className="py-20 bg-black-100" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
-          Projects I've worked on
+          Projects I&apos;ve worked on
         </h2>
         <ProjectCarousel items={projectCards} />
       </div>
