@@ -6,6 +6,12 @@ import firetvads from "./images/firetv-ads.png";
 import autopath from "./images/autopath.png";
 import linuxos from "./images/linux-os.png";
 import fpgablock from "./images/fpgablock.png";
+import disney from "./images/disney.png";
+import amicuscurator from "./images/amicus-curator.png";
+import memorybeats from "./images/memorybeats.png";
+import mms from "./images/mms.png";
+import rubiks from "./images/rubiks.gif";
+import graic from "./images/rubiks.gif";
 
 type ContentSection = {
   title: string;
@@ -172,9 +178,9 @@ export const projects: Project[] = [
     id: 7,
     title: "Traversing Disney World",
     des: "Pathfinding algorithms for theme park navigation",
-    src: "/p1.svg",
+    src: disney,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://github.com/shreyapatill/traversing-disneyworld?tab=readme-ov-file",
     tags: ["Algorithms", "Systems"],
     content: {
       sections: [
@@ -193,9 +199,9 @@ export const projects: Project[] = [
     id: 8,
     title: "Amicus Curator",
     des: "AI system for judicial sentencing analysis",
-    src: "/p1.svg",
+    src: amicuscurator,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://docs.google.com/presentation/d/1UbLXxItRCL2eflPYdJtK1sUC93ORLOv7buiA3lS0Xqg/edit?usp=sharing",
     tags: ["AI/ML", "Systems"],
     content: {
       sections: [
@@ -214,9 +220,9 @@ export const projects: Project[] = [
     id: 9,
     title: "MemoryBeats",
     des: "Music playlist generator for dementia patients",
-    src: "/p1.svg",
+    src: memorybeats,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://github.com/CS196Illinois/Group-5-SP21",
     tags: ["Mobile", "Backend"],
     content: {
       sections: [
@@ -235,9 +241,9 @@ export const projects: Project[] = [
     id: 10,
     title: "Improving MMS Algorithm",
     des: "Research in fair division algorithms",
-    src: "/p1.svg",
+    src: mms,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://github.com/shreyapatill/PURE-Research-Project",
     tags: ["Algorithms", "Research"],
     content: {
       sections: [
@@ -256,9 +262,9 @@ export const projects: Project[] = [
     id: 11,
     title: "Rubik's Cube Solving Robot",
     des: "Autonomous robot for solving Rubik's Cube",
-    src: "/p1.svg",
+    src: rubiks,
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://docs.google.com/document/d/1ilLnubCBHi363ZguLsFRF2ngLP4usWoFoPJ6BoyOHLs/edit?usp=sharing",
     tags: ["Embedded", "Robotics"],
     content: {
       sections: [
@@ -271,6 +277,27 @@ export const projects: Project[] = [
         }
       ],
       description: "Autonomous robot for solving Rubik's Cube"
+    }
+  },
+  {
+    id: 12,
+    title: "Autonomous Vehicle Path Planning",
+    des: "PD controller with A* pathfinding for GRAIC competition",
+    src: graic,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://drive.google.com/file/d/1JpDNg8tArc0CcWTPc3yhhaSAoPr-Fzxg/view?usp=sharing",
+    tags: ["Robotics", "Embedded", "AI/ML"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Created a software controller for autonomous racing within the GRAIC simulation environment.",
+            "Utilized an algorithm for local path planning to avoid obstacles and boundaries and a PD controller for managing the vehicles speed and rotation."
+          ]
+        }
+      ],
+      description: "PD controller with A* pathfinding for GRAIC competition"
     }
   }
 ];
