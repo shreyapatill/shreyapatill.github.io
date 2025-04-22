@@ -11,7 +11,7 @@ import amicuscurator from "./images/amicus-curator.png";
 import memorybeats from "./images/memorybeats.png";
 import mms from "./images/mms.png";
 import rubiks from "./images/rubiks.gif";
-import graic from "./images/rubiks.gif";
+import graic from "./images/graic.gif";
 
 type ContentSection = {
   title: string;
