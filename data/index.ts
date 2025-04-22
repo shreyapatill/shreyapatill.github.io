@@ -12,7 +12,13 @@ import memorybeats from "./images/memorybeats.png";
 import mms from "./images/mms.png";
 import rubiks from "./images/rubiks.gif";
 import graic from "./images/graic.gif";
-
+import exp1 from "./images/exp1.svg";
+import exp2 from "./images/exp2.svg";
+import exp3 from "./images/exp3.svg";
+import exp4 from "./images/exp4.svg";
+import git from "./images/git.svg";
+import gmail from "./images/gmail.svg";
+import linkedin from "./images/link.svg";
 type ContentSection = {
   title: string;
   items: string[];
@@ -308,34 +314,52 @@ export const workExperience = [
     title: "Lead Developer/Co-Founder",
     desc: "PrivyTrack | Champaign, IL | December 2023 – present",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: exp1,
   },
   {
     id: 2,
     title: "Software Development Engineer Intern",
     desc: "Amazon Lab126 | Sunnyvale, CA | May 2023– September 2023",
     className: "md:col-span-2",
-    thumbnail: "/exp2.svg",
+    thumbnail: exp2,
   },
   {
     id: 3,
     title: "Software Developer Engineer Intern",
     desc: "Amazon | Arlington, VA | May 2022 – August 2022",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    thumbnail: exp3,
   },
   {
     id: 4,
     title: "Engineering Learning Assistant",
     desc: "Grainger College of Engineering | Champaign, IL | January 2022 – December 2022",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: exp4,
   },
   {
     id: 5,
     title: "Product Engineering Intern",
     desc: "John Deere | Des Moines, IA | June 2021– January 2022",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: exp1,
+  },
+];
+
+export const socialMedia = [
+  {
+    id: 1,
+    img: git,
+    link: "https://github.com/shreyapatill",
+  },
+  {
+    id: 2,
+    img: gmail,
+    link: "mailto:shreyapatil0120@gmail.com",
+  },
+  {
+    id: 3,
+    img: linkedin,
+    link: "https://www.linkedin.com/in/shreya-patilll/",
   },
 ];

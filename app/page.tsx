@@ -4,6 +4,8 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import { FaHome } from "react-icons/fa";
 import RecentProjects from "@/components/RecentProjects";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
+import Strengths from "@/components/Strengths";
 
 export default function Home() {
   return (
@@ -12,11 +14,16 @@ export default function Home() {
         <FloatingNav
           navItems={[
             { name: "Home", link: "/", icon: <FaHome /> },
+            { name: "Projects", link: "#projects" },
+            { name: "Experience", link: "#workexperience" },
+            { name: "Contact", link: "#contact" }, 
           ]}
         />
         <Hero />
         <RecentProjects />
         <Experience />
+        <Strengths />
+        <Footer />
       </div>
     </main>
   );

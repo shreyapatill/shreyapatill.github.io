@@ -9,6 +9,7 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.1.2",
     "@tabler/icons-react": "^3.30.0",
     "clsx": "^2.1.1",
     "mini-svg-data-uri": "^1.4.4",
@@ -24,13 +25,15 @@
     "react-lottie": "^1.2.10",
     "simplex-noise": "^4.0.3",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.175.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "gh-pages": "^6.3.0",

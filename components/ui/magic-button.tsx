@@ -3,35 +3,44 @@ import React, { ReactNode, createContext, useContext, useEffect, useRef, useStat
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-/**
- * UI: border magic from tailwind css btns
- * Link: https://ui.aceternity.com/components/tailwindcss-buttons
- *
- * change border radius to rounded-lg
- * add margin of md:mt-10
- * remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50
- */
-const MagicButton = ({
-  title,
-  icon,
-  position,
-  handleClick,
-  otherClasses,
-  modalContent,
-  modalClassName,
-}: {
+type MagicButtonBaseProps = {
   title: string;
   icon: React.ReactNode;
-  position: string;
-  handleClick?: () => void;
+  position: "left" | "right";
   otherClasses?: string;
   modalContent?: ReactNode;
   modalClassName?: string;
-}) => {
+};
+
+type MagicButtonButtonProps = MagicButtonBaseProps & {
+  as?: "button";
+  onClick?: () => void;
+};
+
+type MagicButtonAnchorProps = MagicButtonBaseProps & {
+  as: "a";
+  href: string;
+  target?: string;
+  rel?: string;
+};
+
+type MagicButtonProps = MagicButtonButtonProps | MagicButtonAnchorProps;
+
+const MagicButton = (props: MagicButtonProps) => {
+  const {
+    title,
+    icon,
+    position,
+    otherClasses,
+    modalContent,
+    modalClassName,
+    ...rest
+  } = props;
+
   if (modalContent) {
     return (
       <ModalProvider>
-        <MagicButtonWithModal 
+        <MagicButtonWithModal
           title={title}
           icon={icon}
           position={position}
@@ -43,14 +52,49 @@ const MagicButton = ({
     );
   }
 
+  // Render as <a>
+  if (props.as === "a") {
+    const { href, target, rel } = props;
+    return (
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        className={cn(
+          "relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none",
+          otherClasses
+        )}
+      >
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#CBACF9_0%,#B5446E_50%,#CBACF9_100%)]" />
+        <span
+          className={cn(
+            "inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black-100 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2",
+            "no-underline"
+          )}
+        >
+          {position === "left" && icon}
+          {title}
+          {position === "right" && icon}
+        </span>
+      </a>
+    );
+  }
+
+  // Render as <button>
   return (
     <button
-      className={`relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none ${otherClasses}`}
-      onClick={handleClick}
+      type="button"
+      className={cn(
+        "relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none",
+        otherClasses
+      )}
+      onClick={props.onClick}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#CBACF9_0%,#B5446E_50%,#CBACF9_100%)]" />
       <span
-        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black-100 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2`}
+        className={cn(
+          "inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black-100 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2"
+        )}
       >
         {position === "left" && icon}
         {title}
@@ -60,6 +104,8 @@ const MagicButton = ({
   );
 };
 
+interface MagicButtonWithModalProps extends Omit<MagicButtonBaseProps, "as" | "onClick"> {}
+
 const MagicButtonWithModal = ({
   title,
   icon,
@@ -67,14 +113,7 @@ const MagicButtonWithModal = ({
   otherClasses,
   modalContent,
   modalClassName,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  position: string;
-  otherClasses?: string;
-  modalContent?: ReactNode;
-  modalClassName?: string;
-}) => {
+}: MagicButtonWithModalProps) => {
   const { open, setOpen } = useModal();
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -83,13 +122,14 @@ const MagicButtonWithModal = ({
   return (
     <>
       <button
-        className={`relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none ${otherClasses}`}
+        className={cn(
+          "relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none",
+          otherClasses
+        )}
         onClick={() => setOpen(true)}
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#CBACF9_0%,#B5446E_50%,#CBACF9_100%)]" />
-        <span
-          className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black-100 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2`}
-        >
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-black-100 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2">
           {position === "left" && icon}
           {title}
           {position === "right" && icon}
@@ -110,7 +150,7 @@ const MagicButtonWithModal = ({
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black-100 bg-opacity-50"
             />
-            
+
             <motion.div
               ref={modalRef}
               className={cn(
@@ -143,6 +183,7 @@ const MagicButtonWithModal = ({
               <button
                 onClick={() => setOpen(false)}
                 className="absolute top-4 right-4 group"
+                aria-label="Close modal"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
