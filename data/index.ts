@@ -301,3 +301,41 @@ export const projects: Project[] = [
     }
   }
 ];
+
+export const workExperience = [
+  {
+    id: 1,
+    title: "Lead Developer/Co-Founder",
+    desc: "PrivyTrack | Champaign, IL | December 2023 – present",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+  {
+    id: 2,
+    title: "Software Development Engineer Intern",
+    desc: "Amazon Lab126 | Sunnyvale, CA | May 2023– September 2023",
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+  },
+  {
+    id: 3,
+    title: "Software Developer Engineer Intern",
+    desc: "Amazon | Arlington, VA | May 2022 – August 2022",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/exp3.svg",
+  },
+  {
+    id: 4,
+    title: "Engineering Learning Assistant",
+    desc: "Grainger College of Engineering | Champaign, IL | January 2022 – December 2022",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+  {
+    id: 5,
+    title: "Product Engineering Intern",
+    desc: "John Deere | Des Moines, IA | June 2021– January 2022",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
+];

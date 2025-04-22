@@ -82,7 +82,7 @@ const RecentProjects = () => {
     <section className="py-20 bg-black-100" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">
-          Projects I&apos;ve worked on
+        <span className="text-purple-200">Projects</span> I&apos;ve done
         </h2>
         <ProjectCarousel items={projectCards} />
       </div>
