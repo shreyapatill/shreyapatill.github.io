@@ -34,7 +34,6 @@ const MagicButton = (props: MagicButtonProps) => {
     otherClasses,
     modalContent,
     modalClassName,
-    ...rest
   } = props;
 
   if (modalContent) {
@@ -104,8 +103,6 @@ const MagicButton = (props: MagicButtonProps) => {
   );
 };
 
-interface MagicButtonWithModalProps extends Omit<MagicButtonBaseProps, "as" | "onClick"> {}
-
 const MagicButtonWithModal = ({
   title,
   icon,
@@ -113,7 +110,7 @@ const MagicButtonWithModal = ({
   otherClasses,
   modalContent,
   modalClassName,
-}: MagicButtonWithModalProps) => {
+}: Omit<MagicButtonBaseProps, "as" | "onClick">) => {
   const { open, setOpen } = useModal();
   const modalRef = useRef<HTMLDivElement>(null);
 
