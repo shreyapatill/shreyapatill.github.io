@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'personal-website'; // Replace with your GitHub repository name
+const repoName = 'shreyapatill.github.io'; // Replace with your GitHub repository name
 
 const nextConfig: NextConfig = {
   output: 'export', // Required for static export

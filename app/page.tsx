@@ -22,7 +22,6 @@ export default function Home() {
         <Hero />
         <RecentProjects />
         <Experience />
-        <Strengths />
         <Footer />
       </div>
     </main>

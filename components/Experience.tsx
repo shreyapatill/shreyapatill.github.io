@@ -3,8 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { workExperience } from "@/data";
 import { Button } from "./ui/moving-border";
-import MagicButton from "./ui/magic-button";
-import { FaLocationArrow } from "react-icons/fa";
 
 const Experience = () => {
   return (
