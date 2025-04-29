@@ -6,25 +6,12 @@ import { Button } from "./ui/moving-border";
 import MagicButton from "./ui/magic-button";
 import { FaLocationArrow } from "react-icons/fa";
 
-const RESUME_LINK = "https://drive.google.com/file/d/1dOdZZnbsTpyZ8SWOLFN5kxJc5KqfEOWy/view?usp=sharing";
-
 const Experience = () => {
   return (
     <div id="workexperience" className="py-20 w-full">
       <h1 className="heading text-center mb-12 text-white">
         My <span className="text-purple-200">work experience</span>
       </h1>
-
-      {/* Resume Button - Centered below heading */}
-      <div className="flex justify-center mb-12">
-        <MagicButton
-          title="Complete Resume"
-          icon={<FaLocationArrow />}
-          position="right"
-          onClick={() => window.open(RESUME_LINK, "_blank")}
-          otherClasses="w-full md:w-auto" // Makes button full width on mobile, auto on desktop
-        />
-      </div>
 
       <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
         {workExperience.map((card) => (
