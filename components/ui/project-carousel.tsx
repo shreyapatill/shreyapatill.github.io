@@ -216,9 +216,9 @@ export const ProjectCard = ({
                         <Image
                           src={icon}
                           alt={`tech-icon-${iconIndex}`}
-                          width={40}
-                          height={40}
-                          className="p-2 w-full h-full object-contain"
+                          width={50}
+                          height={50}
+                          className="p-1.5 w-full h-full object-contain"
                         />
                       </div>
                     ))}

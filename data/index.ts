@@ -36,6 +36,12 @@ import cpp from "./images/cpp.svg"
 import qt from "./images/qt.svg"
 import jenkins from "./images/jenkins.svg"
 import cmake from "./images/cmake.svg"
+import riscv from "./images/riscv.svg"
+import c from "./images/c.svg"
+import qemu from "./images/qemu.svg"
+import gdb from "./images/gdb.svg"
+import linux from "./images/linux.svg"
+
 type ContentSection = {
   title: string;
   items: string[];
@@ -158,7 +164,7 @@ export const projects: Project[] = [
     title: "Linux-like OS Kernel Implementation",
     des: "From-bootloader userspace environment in RISC-V ASM/C",
     src: linuxos,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [riscv, c, qemu, gdb, git, linux],
     link: "https://github.com/shreyapatill/operating-systems",
     tags: ["Embedded", "Systems", "Research"],
     content: {
