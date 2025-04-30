@@ -5,7 +5,6 @@ import { FaHome } from "react-icons/fa";
 import RecentProjects from "@/components/RecentProjects";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
-import Strengths from "@/components/Strengths";
 
 export default function Home() {
   return (

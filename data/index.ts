@@ -19,6 +19,23 @@ import exp4 from "./images/exp4.svg";
 import git from "./images/git.svg";
 import gmail from "./images/gmail.svg";
 import linkedin from "./images/link.svg";
+import react from "./images/react.svg"
+import supabase from "./images/supabase.svg"
+import typescript from "./images/typescript.svg"
+import tailwindcss from "./images/tailwindcss.svg"
+import expo from "./images/expo.svg"
+import zod from "./images/zod.svg"
+import alexa from "./images/alexa.svg"
+import kotlin from "./images/kotlin.svg"
+import java from "./images/java.svg"
+import android from "./images/android.svg"
+import junit from "./images/junit.svg"
+import aws from "./images/aws.svg"
+import redux from "./images/redux.svg"
+import cpp from "./images/cpp.svg"
+import qt from "./images/qt.svg"
+import jenkins from "./images/jenkins.svg"
+import cmake from "./images/cmake.svg"
 type ContentSection = {
   title: string;
   items: string[];
@@ -44,7 +61,7 @@ export const projects: Project[] = [
     title: "PrivyTrack",
     des: "Privacy-focused period tracker with React Native frontend and secure API",
     src: privy,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [react, supabase, typescript, tailwindcss, expo, zod],
     link: "https://privytrack.com",
     tags: ["Mobile", "Backend", "Security", "Fullstack"],
     content: {
@@ -68,7 +85,7 @@ export const projects: Project[] = [
     title: "Amazon Fire TV News Widget",
     des: "APL-based content delivery system for Alexa devices",
     src: newswidget,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [alexa, kotlin, java, android, junit, aws ],
     link: "https://www.aboutamazon.com/news/devices/amazons-latest-fire-tv-is-smarter-than-ever-thanks-to-ambient-intelligence-and-alexa",
     tags: ["Frontend", "Cloud", "Graphics"],
     content: {
@@ -93,7 +110,7 @@ export const projects: Project[] = [
     title: "Amazon Ad Analytics Dashboard",
     des: "React/Redux visualization for FireTV user ad metrics",
     src: firetvads,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [react, redux, typescript, aws],
     link: "https://advertising.amazon.com/resources/ad-specs/fire-tv",
     tags: ["Data", "Frontend", "Cloud"],
     content: {
@@ -118,7 +135,7 @@ export const projects: Project[] = [
     title: "John Deere AutoPath Analytics",
     des: "C++ data pipeline for autonomous farming systems",
     src: autopath,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [cpp, qt, jenkins, cmake],
     link: "https://www.deere.com/en/technology-products/precision-ag-technology/guidance/autopath/",
     tags: ["Embedded", "Data", "Robotics"],
     content: {
@@ -311,34 +328,40 @@ export const projects: Project[] = [
 export const workExperience = [
   {
     id: 1,
+    title: "Incoming Robotics Research Engineer",
+    desc: "U.S. Army Engineer Research and Development Center | Champaign, IL | June 2025",
+    className: "md:col-span-2",
+    thumbnail: exp4,
+  },{
+    id: 2,
     title: "Lead Developer/Co-Founder",
     desc: "PrivyTrack | Champaign, IL | December 2023 – present",
     className: "md:col-span-2",
     thumbnail: exp1,
   },
   {
-    id: 2,
+    id: 3,
     title: "Software Development Engineer Intern",
     desc: "Amazon Lab126 | Sunnyvale, CA | May 2023– September 2023",
     className: "md:col-span-2",
     thumbnail: exp2,
   },
   {
-    id: 3,
+    id: 4,
     title: "Software Developer Engineer Intern",
     desc: "Amazon | Arlington, VA | May 2022 – August 2022",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: exp3,
   },
   {
-    id: 4,
+    id: 5,
     title: "Engineering Learning Assistant",
     desc: "Grainger College of Engineering | Champaign, IL | January 2022 – December 2022",
     className: "md:col-span-2",
     thumbnail: exp4,
   },
   {
-    id: 5,
+    id: 6,
     title: "Product Engineering Intern",
     desc: "John Deere | Des Moines, IA | June 2021– January 2022",
     className: "md:col-span-2",
