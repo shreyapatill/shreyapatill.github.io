@@ -93,7 +93,7 @@ const Hero = () => {
                   <div className="max-h-[300px] md:max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                     <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed space-y-4">
                       <span className="block">
-                        Hi! I&apos;m Shreya, a student pursuing my degree in Electrical and Computer Engineering with a passion for making an impact on the world using technology 🌎💻. I&apos;m interested in many areas of tech, but artificial intelligence, data engineering, and embedded systems interest me the most!
+                        Hi! I&apos;m Shreya, a student a background in Electrical and Computer Engineering and currently advancing my studies in Computer Science at the graduate level with a passion for making an impact on the world using technology 🌎💻. I&apos;m interested in many areas of tech, but artificial intelligence, data engineering, and embedded systems interest me the most!
                       </span>
 
                       <span className="block">

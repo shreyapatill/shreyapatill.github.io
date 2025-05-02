@@ -41,6 +41,7 @@ import c from "./images/c.svg"
 import qemu from "./images/qemu.svg"
 import gdb from "./images/gdb.svg"
 import linux from "./images/linux.svg"
+import intel from "./images/intel.svg"
 
 type ContentSection = {
   title: string;
@@ -187,7 +188,7 @@ export const projects: Project[] = [
     title: "FPGA 2048",
     des: "SystemVerilog VGA controller with NIOS-II CPU",
     src: fpgablock,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    iconLists: [intel, c, ],
     link: "https://docs.google.com/document/d/1tkpAkVQwqovZKCKXiYD0Gr45hyOlUSO03eEIXs9Lpqs/edit?usp=drive_link",
     tags: ["Embedded", "Graphics", "GameDev"],
     content: {
