@@ -107,27 +107,6 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 12,
-    title: "Rubik's Cube Solving Robot",
-    des: "Autonomous robot for solving Rubik's Cube",
-    src: rubiks,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://docs.google.com/document/d/1ilLnubCBHi363ZguLsFRF2ngLP4usWoFoPJ6BoyOHLs/edit?usp=sharing",
-    tags: ["Embedded", "Robotics"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Constructed and programmed an autonomous robot to solve a Rubik's Cube in ~2.7s.",
-            "Used a Raspberry Pi for control, stepper motors for cube manipulation, a 3D-printed frame, and a tkinter user interface for inputting initial cube state."
-          ]
-        }
-      ],
-      description: "Autonomous robot for solving Rubik's Cube"
-    }
-  },
-  {
     id: 5,
     title: "John Deere AutoPath Analytics",
     des: "C++ data pipeline for autonomous farming systems",
@@ -148,6 +127,27 @@ export const projects: Project[] = [
         }
       ],
       description: "C++ data pipeline for autonomous farming systems"
+    }
+  },
+  {
+    id: 12,
+    title: "Rubik's Cube Solving Robot",
+    des: "Autonomous robot for solving Rubik's Cube",
+    src: rubiks,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://docs.google.com/document/d/1ilLnubCBHi363ZguLsFRF2ngLP4usWoFoPJ6BoyOHLs/edit?usp=sharing",
+    tags: ["Embedded", "Robotics"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Constructed and programmed an autonomous robot to solve a Rubik's Cube in ~2.7s.",
+            "Used a Raspberry Pi for control, stepper motors for cube manipulation, a 3D-printed frame, and a tkinter user interface for inputting initial cube state."
+          ]
+        }
+      ],
+      description: "Autonomous robot for solving Rubik's Cube"
     }
   },
   {
@@ -192,6 +192,48 @@ export const projects: Project[] = [
         }
       ],
       description: "SystemVerilog VGA controller with NIOS-II CPU"
+    }
+  },
+  {
+    id: 11,
+    title: "Improving MMS Algorithm",
+    des: "Research in fair division algorithms",
+    src: mms,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/shreyapatill/PURE-Research-Project",
+    tags: ["Algorithms", "Research"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Aimed to improve the approximation guarantee of MMS algorithms, starting with the study and implementation of EF1 and ½-MMS algorithms.",
+            "Worked towards finding and proving conjectures to surpass the ⅔-MMS allocation, to potentially reach ¾ or ⅘-MMS."
+          ]
+        }
+      ],
+      description: "Research in fair division algorithms"
+    }
+  },
+  {
+    id: 8,
+    title: "Traversing Disney World",
+    des: "Pathfinding algorithms for theme park navigation",
+    src: disney,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://github.com/shreyapatill/traversing-disneyworld?tab=readme-ov-file",
+    tags: ["Algorithms", "Systems"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Developed search tool in C++ for Disney theme park visitors to optimize their experience by suggesting rides based on location and wait times.",
+            "Utilized an unofficial Disney API for data and employed graph algorithms like BFS, Dijkstra's, and Kruskal's to find efficient paths and maximize rides given a time limit."
+          ]
+        }
+      ],
+      description: "Pathfinding algorithms for theme park navigation"
     }
   },
   {
@@ -269,27 +311,6 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 8,
-    title: "Traversing Disney World",
-    des: "Pathfinding algorithms for theme park navigation",
-    src: disney,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/shreyapatill/traversing-disneyworld?tab=readme-ov-file",
-    tags: ["Algorithms", "Systems"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Developed search tool in C++ for Disney theme park visitors to optimize their experience by suggesting rides based on location and wait times.",
-            "Utilized an unofficial Disney API for data and employed graph algorithms like BFS, Dijkstra's, and Kruskal's to find efficient paths and maximize rides given a time limit."
-          ]
-        }
-      ],
-      description: "Pathfinding algorithms for theme park navigation"
-    }
-  },
-  {
     id: 9,
     title: "Amicus Curator",
     des: "AI system for judicial sentencing analysis",
@@ -329,27 +350,6 @@ export const projects: Project[] = [
         }
       ],
       description: "Music playlist generator for dementia patients"
-    }
-  },
-  {
-    id: 11,
-    title: "Improving MMS Algorithm",
-    des: "Research in fair division algorithms",
-    src: mms,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/shreyapatill/PURE-Research-Project",
-    tags: ["Algorithms", "Research"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Aimed to improve the approximation guarantee of MMS algorithms, starting with the study and implementation of EF1 and ½-MMS algorithms.",
-            "Worked towards finding and proving conjectures to surpass the ⅔-MMS allocation, to potentially reach ¾ or ⅘-MMS."
-          ]
-        }
-      ],
-      description: "Research in fair division algorithms"
     }
   },
 ];
