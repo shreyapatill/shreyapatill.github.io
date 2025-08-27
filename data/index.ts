@@ -12,6 +12,7 @@ import memorybeats from "./images/memorybeats.png";
 import mms from "./images/mms.png";
 import rubiks from "./images/rubiks.gif";
 import graic from "./images/graic.gif";
+import gerald from "./images/gerald.png";
 import exp1 from "./images/exp1.svg";
 import exp2 from "./images/exp2.svg";
 import exp3 from "./images/exp3.svg";
@@ -65,6 +66,27 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "GERALD",
+    des: "ROS2 autonomous navigation system for heavy equipment with computer vision and reinforcement learning",
+    src: gerald,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://drive.google.com/file/d/1NVRMA01ehESviTrzOQWMjoGk7OX_xoz3/view?usp=sharing",
+    tags: ["Robotics", "Embedded", "AI/ML", "Computer Vision"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Engineered ROS2 autonomous navigation system heavy equipment with computer vision, and reinforcement learning (C/Python).",
+            "Fused ZED camera, IMU, and GPS data as input to extend Kalman filters for localization and 3D mapping (Octomap) with Nav2 stack for path planning/obstacle avoidance and simulation systems (URDF/Gazebo/Rviz)."
+          ]
+        }
+      ],
+      description: "ROS2 autonomous navigation system for heavy equipment with computer vision and reinforcement learning"
+    }
+  },
+  {
+    id: 2,
     title: "PrivyTrack",
     des: "Privacy-focused period tracker with React Native frontend and secure API",
     src: privy,
@@ -88,7 +110,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "Amazon Fire TV News Widget",
     des: "APL-based content delivery system for Alexa devices",
     src: newswidget,
@@ -113,7 +135,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Amazon Ad Analytics Dashboard",
     des: "React/Redux visualization for FireTV user ad metrics",
     src: firetvads,
@@ -138,7 +160,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "John Deere AutoPath Analytics",
     des: "C++ data pipeline for autonomous farming systems",
     src: autopath,
@@ -161,7 +183,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "Linux-like OS Kernel Implementation",
     des: "From-bootloader userspace environment in RISC-V ASM/C",
     src: linuxos,
@@ -184,7 +206,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 6,
+    id: 7,
     title: "FPGA 2048",
     des: "SystemVerilog VGA controller with NIOS-II CPU",
     src: fpgablock,
@@ -205,7 +227,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 7,
+    id: 8,
     title: "Traversing Disney World",
     des: "Pathfinding algorithms for theme park navigation",
     src: disney,
@@ -226,7 +248,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 8,
+    id: 9,
     title: "Amicus Curator",
     des: "AI system for judicial sentencing analysis",
     src: amicuscurator,
@@ -247,7 +269,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 9,
+    id: 10,
     title: "MemoryBeats",
     des: "Music playlist generator for dementia patients",
     src: memorybeats,
@@ -268,7 +290,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 10,
+    id: 11,
     title: "Improving MMS Algorithm",
     des: "Research in fair division algorithms",
     src: mms,
@@ -289,7 +311,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 11,
+    id: 12,
     title: "Rubik's Cube Solving Robot",
     des: "Autonomous robot for solving Rubik's Cube",
     src: rubiks,
@@ -310,7 +332,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: 12,
+    id: 13,
     title: "Autonomous Vehicle Path Planning",
     des: "PD controller with A* pathfinding for GRAIC competition",
     src: graic,
@@ -329,13 +351,14 @@ export const projects: Project[] = [
       ],
       description: "PD controller with A* pathfinding for GRAIC competition"
     }
-  }
+  },
+
 ];
 
 export const workExperience = [
   {
     id: 1,
-    title: "Incoming Robotics Research Engineer",
+    title: "Robotics Research Engineer",
     desc: "U.S. Army Engineer Research and Development Center | Champaign, IL | June 2025",
     className: "md:col-span-2",
     thumbnail: exp4,
