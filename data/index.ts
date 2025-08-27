@@ -86,6 +86,115 @@ export const projects: Project[] = [
     }
   },
   {
+    id: 13,
+    title: "Autonomous Vehicle Path Planning",
+    des: "PD controller with A* pathfinding for GRAIC competition",
+    src: graic,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://drive.google.com/file/d/1JpDNg8tArc0CcWTPc3yhhaSAoPr-Fzxg/view?usp=sharing",
+    tags: ["Robotics", "Embedded", "AI/ML"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Created a software controller for autonomous racing within the GRAIC simulation environment.",
+            "Utilized an algorithm for local path planning to avoid obstacles and boundaries and a PD controller for managing the vehicles speed and rotation."
+          ]
+        }
+      ],
+      description: "PD controller with A* pathfinding for GRAIC competition"
+    }
+  },
+  {
+    id: 12,
+    title: "Rubik's Cube Solving Robot",
+    des: "Autonomous robot for solving Rubik's Cube",
+    src: rubiks,
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://docs.google.com/document/d/1ilLnubCBHi363ZguLsFRF2ngLP4usWoFoPJ6BoyOHLs/edit?usp=sharing",
+    tags: ["Embedded", "Robotics"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Constructed and programmed an autonomous robot to solve a Rubik's Cube in ~2.7s.",
+            "Used a Raspberry Pi for control, stepper motors for cube manipulation, a 3D-printed frame, and a tkinter user interface for inputting initial cube state."
+          ]
+        }
+      ],
+      description: "Autonomous robot for solving Rubik's Cube"
+    }
+  },
+  {
+    id: 5,
+    title: "John Deere AutoPath Analytics",
+    des: "C++ data pipeline for autonomous farming systems",
+    src: autopath,
+    iconLists: [cpp, qt, jenkins, cmake],
+    link: "https://www.deere.com/en/technology-products/precision-ag-technology/guidance/autopath/",
+    tags: ["Embedded", "Data", "Robotics"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Developed analytics dashboard for John Deere's AutoPath, an autonomous farming navigation system used in 5,000+ farm vehicles, using C/C++.",
+            "Leveraged an existing framework to package and transmit data from embedded systems to analytics team, improving plant-to-row and boundary tracking features and optimizing product placement and agricultural yield.",
+            "Developed a data pipeline using Qt Creator to streamline processing.",
+            "Orchestrated automated build processes using Jenkins pipelines for testing and release management."
+          ]
+        }
+      ],
+      description: "C++ data pipeline for autonomous farming systems"
+    }
+  },
+  {
+    id: 6,
+    title: "Linux-like OS Kernel Implementation",
+    des: "From-bootloader userspace environment in RISC-V ASM/C",
+    src: linuxos,
+    iconLists: [riscv, c, qemu, gdb, git, linux],
+    link: "https://github.com/shreyapatill/operating-systems",
+    tags: ["Embedded", "Systems", "Research"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Developed core operating system components roughly based on Unix V6 and written primarily in RISC-V assembly and C",
+            "Implemented functionalities such as interrupt logic, user threading, Sv39 paging for kernel and applications, device initialization via virtio, and a filesystem to run user programs.",
+            "Implemented key OS abstractions including a filesystem for loading ELF executables, a system call interface enabling user programs to request kernel services, and concurrency mechanisms like fork, locking, and preemptive multitasking.",
+            "Debugged both kernel and user-level code using gdb."
+          ]
+        }
+      ],
+      description: "From-bootloader userspace environment in RISC-V ASM/C"
+    }
+  },
+  {
+    id: 7,
+    title: "FPGA 2048",
+    des: "SystemVerilog VGA controller with NIOS-II CPU",
+    src: fpgablock,
+    iconLists: [intel, c, ],
+    link: "https://docs.google.com/document/d/1tkpAkVQwqovZKCKXiYD0Gr45hyOlUSO03eEIXs9Lpqs/edit?usp=drive_link",
+    tags: ["Embedded", "Graphics", "GameDev"],
+    content: {
+      sections: [
+        {
+          title: "What I did",
+          items: [
+            "Implemented the 2048 game on an FPGA, utilizing NIOS II CPU programmed in C to manage game logic such as tile movement, merging, and scorekeeping.",
+            "Developed hardware modules in SystemVerilog for the VGA controller and video RAM (VRAM) to render 4x4 game board and tiles with distinct colors."
+          ]
+        }
+      ],
+      description: "SystemVerilog VGA controller with NIOS-II CPU"
+    }
+  },
+  {
     id: 2,
     title: "PrivyTrack",
     des: "Privacy-focused period tracker with React Native frontend and secure API",
@@ -157,73 +266,6 @@ export const projects: Project[] = [
         }
       ],
       description: "React/Redux visualization for FireTV user ad metrics"
-    }
-  },
-  {
-    id: 5,
-    title: "John Deere AutoPath Analytics",
-    des: "C++ data pipeline for autonomous farming systems",
-    src: autopath,
-    iconLists: [cpp, qt, jenkins, cmake],
-    link: "https://www.deere.com/en/technology-products/precision-ag-technology/guidance/autopath/",
-    tags: ["Embedded", "Data", "Robotics"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Developed analytics dashboard for John Deere's AutoPath, an autonomous farming navigation system used in 5,000+ farm vehicles, using C/C++.",
-            "Leveraged an existing framework to package and transmit data from embedded systems to analytics team, improving plant-to-row and boundary tracking features and optimizing product placement and agricultural yield.",
-            "Developed a data pipeline using Qt Creator to streamline processing.",
-            "Orchestrated automated build processes using Jenkins pipelines for testing and release management."
-          ]
-        }
-      ],
-      description: "C++ data pipeline for autonomous farming systems"
-    }
-  },
-  {
-    id: 6,
-    title: "Linux-like OS Kernel Implementation",
-    des: "From-bootloader userspace environment in RISC-V ASM/C",
-    src: linuxos,
-    iconLists: [riscv, c, qemu, gdb, git, linux],
-    link: "https://github.com/shreyapatill/operating-systems",
-    tags: ["Embedded", "Systems", "Research"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Developed core operating system components roughly based on Unix V6 and written primarily in RISC-V assembly and C",
-            "Implemented functionalities such as interrupt logic, user threading, Sv39 paging for kernel and applications, device initialization via virtio, and a filesystem to run user programs.",
-            "Implemented key OS abstractions including a filesystem for loading ELF executables, a system call interface enabling user programs to request kernel services, and concurrency mechanisms like fork, locking, and preemptive multitasking.",
-            "Debugged both kernel and user-level code using gdb."
-          ]
-        }
-      ],
-      description: "From-bootloader userspace environment in RISC-V ASM/C"
-    }
-  },
-  {
-    id: 7,
-    title: "FPGA 2048",
-    des: "SystemVerilog VGA controller with NIOS-II CPU",
-    src: fpgablock,
-    iconLists: [intel, c, ],
-    link: "https://docs.google.com/document/d/1tkpAkVQwqovZKCKXiYD0Gr45hyOlUSO03eEIXs9Lpqs/edit?usp=drive_link",
-    tags: ["Embedded", "Graphics", "GameDev"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Implemented the 2048 game on an FPGA, utilizing NIOS II CPU programmed in C to manage game logic such as tile movement, merging, and scorekeeping.",
-            "Developed hardware modules in SystemVerilog for the VGA controller and video RAM (VRAM) to render 4x4 game board and tiles with distinct colors."
-          ]
-        }
-      ],
-      description: "SystemVerilog VGA controller with NIOS-II CPU"
     }
   },
   {
@@ -310,49 +352,6 @@ export const projects: Project[] = [
       description: "Research in fair division algorithms"
     }
   },
-  {
-    id: 12,
-    title: "Rubik's Cube Solving Robot",
-    des: "Autonomous robot for solving Rubik's Cube",
-    src: rubiks,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://docs.google.com/document/d/1ilLnubCBHi363ZguLsFRF2ngLP4usWoFoPJ6BoyOHLs/edit?usp=sharing",
-    tags: ["Embedded", "Robotics"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Constructed and programmed an autonomous robot to solve a Rubik's Cube in ~2.7s.",
-            "Used a Raspberry Pi for control, stepper motors for cube manipulation, a 3D-printed frame, and a tkinter user interface for inputting initial cube state."
-          ]
-        }
-      ],
-      description: "Autonomous robot for solving Rubik's Cube"
-    }
-  },
-  {
-    id: 13,
-    title: "Autonomous Vehicle Path Planning",
-    des: "PD controller with A* pathfinding for GRAIC competition",
-    src: graic,
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://drive.google.com/file/d/1JpDNg8tArc0CcWTPc3yhhaSAoPr-Fzxg/view?usp=sharing",
-    tags: ["Robotics", "Embedded", "AI/ML"],
-    content: {
-      sections: [
-        {
-          title: "What I did",
-          items: [
-            "Created a software controller for autonomous racing within the GRAIC simulation environment.",
-            "Utilized an algorithm for local path planning to avoid obstacles and boundaries and a PD controller for managing the vehicles speed and rotation."
-          ]
-        }
-      ],
-      description: "PD controller with A* pathfinding for GRAIC competition"
-    }
-  },
-
 ];
 
 export const workExperience = [
